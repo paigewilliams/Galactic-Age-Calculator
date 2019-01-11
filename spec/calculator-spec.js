@@ -33,4 +33,8 @@ describe('Calculator', function(){
     expect(calc.mercuryAge()).toEqual(100);
   });
 
+  it('calculates the users age for planet venus', function(){
+    expect(calc.venusAge()).toEqual(100);
+  });
+
 });
