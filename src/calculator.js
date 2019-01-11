@@ -59,15 +59,16 @@ export class Calculator {
     }
   };
 
-  // venusExpectancy(){
-  //   let venusAge = this.venusAge();
-  //   let expectancy = venusAge - this.lifeExpectancy;
-  //   if (expectancy > 0) {
-  //     return `You have lived ${expectancy} years longer than expected on planet Venus`;
-  //   }
-  //   else {
-  //      return `You have ${expectancy} years left on planet Venus`;
-  //   }
-  // };
+  venusExpectancy(){
+    let venusAge = this.venusAge();
+    let expectancy = venusAge - this.lifeExpectancy;
+    if (expectancy > 0) {
+      return `You have lived ${expectancy} years longer than expected on planet Venus`;
+    }
+    else {
+      expectancy *= -1;
+      return `You have ${expectancy} years left on planet Venus`;
+    }
+  };
 
 }
