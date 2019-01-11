@@ -2,21 +2,24 @@ import { Calculator } from './../src/calculator.js';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles.css';
 
 $(document).ready(function(){
   $(".age-form").submit(function(event){
     event.preventDefault();
 
     let date = $("#date").val();
-    console.log(date)
     let exp = parseInt($("#exp").val());
-    
     let calc = new Calculator(date, exp);
-    let expectancies = calc.galacticExpCalc();
+    calc.galacticExpCalc();
 
     let ages = calc.galacticAges;
 
-    console.log(ages);
+    $("#mercury").html(ages[0]);
+    $("#venus").html(ages[1]);
+    $("#mars").html(ages[2]);
+    $("#jupiter").html(ages[3]);
+    $(".output").show();
 
   });
 });
