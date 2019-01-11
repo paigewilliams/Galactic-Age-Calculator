@@ -47,4 +47,18 @@ export class Calculator {
     let marsAge = parseInt((1/11.86)* this.age);
     return marsAge;
   }
+
+  mercuryExpectancy(){
+    let mercuryAge = this.mercuryAge();
+    let expectancy = mercuryAge - this.lifeExpectancy;
+    debugger;
+    if (expectancy > 0) {
+      return `You have lived ${expectancy} years longer than expected on planet Mercury`;
+    }
+    else {
+       return `You have ${expectancy} years left on planet Mercury`;
+    }
+
+  }
+
 }

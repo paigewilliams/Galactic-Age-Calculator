@@ -46,7 +46,7 @@ describe('Calculator', function(){
   });
 
   it('calculates the users life expectancy on planet mercury', function(){
-    expect(calc.mercuryExpectancy()).toEqual("You have lived 21 years longer than expected on planet Mercury")
+    expect(calc.mercuryExpectancy()).toEqual('You have lived 21 years longer than expected on planet Mercury')
   })
 
 });
