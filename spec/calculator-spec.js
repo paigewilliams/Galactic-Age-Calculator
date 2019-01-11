@@ -11,7 +11,7 @@ describe('Calculator', function(){
     calc.galacticExpCalc();
     calc2 = new Calculator("1970-01-06", 97);
     calc2.galacticExpCalc();
-    calc3 = new Calculator("1926-04-06", 74);
+    calc3 = new Calculator("1936-04-06", 74);
     calc3.galacticExpCalc();
   });
 
@@ -24,17 +24,28 @@ describe('Calculator', function(){
     expect(calc2.birthday.getUTCMonth()).toEqual(0);
     expect(calc2.birthday.getUTCFullYear()).toEqual(1970);
     expect(calc2.lifeExpectancy).toEqual(97);
+    expect(calc3.birthday.getUTCDate()).toEqual(6);
+    expect(calc3.birthday.getUTCMonth()).toEqual(3);
+    expect(calc3.birthday.getUTCFullYear()).toEqual(1936);
+    expect(calc3.lifeExpectancy).toEqual(74);
   });
 
   it('takes the users birthday and life expectancy and sets now as the current time', function(){
     expect(calc.now.getUTCFullYear()).toEqual(2019);
     expect(calc.now.getUTCDate()).toEqual(11);
     expect(calc.now.getUTCMonth()).toEqual(0);
+    expect(calc2.now.getUTCFullYear()).toEqual(2019);
+    expect(calc2.now.getUTCDate()).toEqual(11);
+    expect(calc2.now.getUTCMonth()).toEqual(0);
+    expect(calc3.now.getUTCFullYear()).toEqual(2019);
+    expect(calc3.now.getUTCDate()).toEqual(11);
+    expect(calc3.now.getUTCMonth()).toEqual(0);
   });
 
   it('calculates the users age based off of their inputted birthday', function(){
     expect(calc.age).toEqual(24);
     expect(calc2.age).toEqual(49);
+    expect(calc3.age).toEqual(82);
   });
 
   it('calculates the users age for planet Mercury', function(){
