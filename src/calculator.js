@@ -4,6 +4,7 @@ export class Calculator {
     this.now = new Date();
     this.lifeExpectancy = lifeExpectancy;
     this.age = 0;
+    this.galacticAges = [];
   };
 
   findAge(){
@@ -24,29 +25,39 @@ export class Calculator {
     return this.age;
   };
 
-  mercuryAge(){
+  galacticAgeCalc(){
     this.findAge();
-    let mercuryAge = parseInt((1/.24)* this.age);
-    return mercuryAge;
-  };
+    const planets = [0.24, 0.62, 1.88, 11.86];
 
-  venusAge(){
-    this.findAge();
-    let venusAge = parseInt((1/.62)* this.age);
-    return venusAge;
-  };
+    for (var i = 0; i < planets.length; i++){
+      this.galacticAges.push(parseInt((1/planets[i])* this.age));
+    }
+    return this.galacticAges;
+  }
 
-  marsAge(){
-    this.findAge();
-    let marsAge = parseInt((1/1.88)* this.age);
-    return marsAge;
-  };
-
-  jupiterAge(){
-    this.findAge();
-    let marsAge = parseInt((1/11.86)* this.age);
-    return marsAge;
-  };
+  // mercuryAge(){
+  //   this.findAge();
+  //   let mercuryAge = parseInt((1/.24)* this.age);
+  //   return mercuryAge;
+  // };
+  //
+  // venusAge(){
+  //   this.findAge();
+  //   let venusAge = parseInt((1/.62)* this.age);
+  //   return venusAge;
+  // };
+  //
+  // marsAge(){
+  //   this.findAge();
+  //   let marsAge = parseInt((1/1.88)* this.age);
+  //   return marsAge;
+  // };
+  //
+  // jupiterAge(){
+  //   this.findAge();
+  //   let marsAge = parseInt((1/11.86)* this.age);
+  //   return marsAge;
+  // };
 
   mercuryExpectancy(){
     let mercuryAge = this.mercuryAge();
