@@ -15,12 +15,11 @@ export class Calculator {
     const currentYear = this.now.getUTCFullYear();
     const currentMonth = this.now.getUTCMonth();
     const currentDate = this.now.getUTCDate();
-
     this.age = currentYear - birthYear;
-    if (currentMonth - birthMonth <= 0){
-      if (currentDate - birthDate <= 0){
+    let monthDiff = currentMonth - birthMonth;
+    let dayDiff = currentDate - birthDate;
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)){
         this.age --;
-      }
     }
     return this.age;
   };
@@ -28,7 +27,6 @@ export class Calculator {
   galacticAgeCalc(){
     this.findAge();
     const planetsAge = [0.24, 0.62, 1.88, 11.86];
-    debugger;
     for (var i = 0; i < planetsAge.length; i++){
       this.galacticAges.push(parseInt(this.age/planetsAge[i]))
     }
