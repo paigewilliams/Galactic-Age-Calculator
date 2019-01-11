@@ -55,7 +55,8 @@ export class Calculator {
       return `You have lived ${expectancy} years longer than expected on planet Mercury`;
     }
     else {
-       return `You have ${expectancy} years left on planet Mercury`;
+      expectancy *= -1;
+      return `You have ${expectancy} years left on planet Mercury`;
     }
   };
 

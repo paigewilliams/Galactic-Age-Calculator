@@ -47,10 +47,14 @@ describe('Calculator', function(){
 
   it('calculates the users life expectancy on planet Mercury', function(){
     expect(calc.mercuryExpectancy()).toEqual('You have lived 21 years longer than expected on planet Mercury')
-  })
+  });
 
   it('calculates the users life expectancy on planet Venus', function(){
     expect(calc.venusExpectancy()).toEqual('You have 41 years left on planet Venus')
-  })
+  });
+
+  it('calculates the users life expectancy on planet Mars', function(){
+    expect(calc.marsExpectancy()).toEqual('You have 67 years left on planet Venus')
+  });
 
 });
