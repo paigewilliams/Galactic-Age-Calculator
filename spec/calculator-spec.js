@@ -55,23 +55,23 @@ describe('Calculator', function(){
   });
 
   it('calculates the users life expectancy on planet Mercury', function(){
-    expect(calc.galacticExpectancy[0]).toEqual('You have lived 21 years longer than expected on planet Mercury');
-    expect(calc2.galacticExpectancy[0]).toEqual('You have lived 107 years longer than expected on planet Mercury');
+    expect(calc.galacticExpectancy[0]).toEqual('You have 229 years left on planet Mercury');
+    expect(calc2.galacticExpectancy[0]).toEqual('You have 200 years left on planet Mercury');
   });
 
   it('calculates the users life expectancy on planet Venus', function(){
-    expect(calc.galacticExpectancy[1]).toEqual('You have 41 years left on planet Venus');
-    expect(calc2.galacticExpectancy[1]).toEqual('You have 18 years left on planet Venus');
+    expect(calc.galacticExpectancy[1]).toEqual('You have 89 years left on planet Venus');
+    expect(calc2.galacticExpectancy[1]).toEqual('You have 77 years left on planet Venus');
   });
 
   it('calculates the users life expectancy on planet Mars', function(){
-    expect(calc.galacticExpectancy[2]).toEqual('You have 67 years left on planet Mars');
-    expect(calc2.galacticExpectancy[2]).toEqual('You have 71 years left on planet Mars');
+    expect(calc.galacticExpectancy[2]).toEqual('You have 30 years left on planet Mars');
+    expect(calc2.galacticExpectancy[2]).toEqual('You have 25 years left on planet Mars');
   });
 
   it('calculates the users life expectancy on planet Jupiter', function(){
-    expect(calc.galacticExpectancy[3]).toEqual('You have 77 years left on planet Jupiter');
-    expect(calc2.galacticExpectancy[3]).toEqual('You have 93 years left on planet Jupiter');
+    expect(calc.galacticExpectancy[3]).toEqual('You have 4 years left on planet Jupiter');
+    expect(calc2.galacticExpectancy[3]).toEqual('You have 4 years left on planet Jupiter');
   });
 
 });

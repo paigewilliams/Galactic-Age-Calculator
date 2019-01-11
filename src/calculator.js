@@ -40,13 +40,13 @@ export class Calculator {
     const planets = ["Mercury", "Venus", "Mars", "Jupiter"];
     const planetsAge = [0.24, 0.62, 1.88, 11.86];
     for(var i = 0; i< planets.length; i++){
-      let expectancy = this.galacticAges[i] - this.lifeExpectancy;
+      let expectancy = (parseInt(this.lifeExpectancy/planetsAge[i])) - this.galacticAges[i];
       if (expectancy > 0 ){
-        this.galacticExpectancy.push(`You have lived ${expectancy} years longer than expected on planet ${planets[i]}`);
+        this.galacticExpectancy.push(`You have ${expectancy} years left on planet ${planets[i]}`);
       }
       else {
         expectancy *= -1;
-        this.galacticExpectancy.push(`You have ${expectancy} years left on planet ${planets[i]}`);
+        this.galacticExpectancy.push(`You have lived ${expectancy} years longer than expected on planet ${planets[i]}`);
       }
     }
     return this.galacticExpectancy;
