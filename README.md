@@ -45,6 +45,16 @@ View specs [here](https://github.com/paigewilliams/providore-website/tree/master
 
 ## Objectives
 
+- [ ] Specs were committed before any code.
+- [ ] Business logic is throughly tested with Jasmine.
+- [ ] Karma is set up correctly.
+- [ ] Project utilizes ES6 features including classes, let and const.
+- [ ] Dependencies are managed with npm.
+- [ ] Application using webpack to lint, bundle, and process code.
+- [ ] Project is in a polished, portfolio-quality state. (Clear code presentation, error free, complete README, commit history, etc.)
+- [ ] Required functionality was in place by the Friday deadline.
+- [ ] Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
+
 ## Bugs
 
 ## Languages & Frameworks Used
