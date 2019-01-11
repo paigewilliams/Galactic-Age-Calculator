@@ -23,7 +23,7 @@ describe('Calculator', function(){
   });
 
   it('calculates the users age based off of their inputted birthday', function(){
-    calc.findAge();
+    // calc.findAge();
     expect(calc.age).toEqual(24);
     let calc2 = new Calculator("1994-01-03", 79);
     calc2.findAge();
@@ -31,23 +31,23 @@ describe('Calculator', function(){
   });
 
   it('calculates the users age for planet Mercury', function(){
-    calc.galacticAgeCalc();
+    // calc.galacticAgeCalc();
     expect(calc.galacticAges[0]).toEqual(100);
   });
 
   it('calculates the users age for planet Venus', function(){
-    calc.galacticAgeCalc();
+    // calc.galacticAgeCalc();
     expect(calc.galacticAges[1]).toEqual(38);
   });
 
   it('calculates the users age for planet Mars', function(){
-    calc.galacticAgeCalc();
+    // calc.galacticAgeCalc();
     expect(calc.galacticAges[2]).toEqual(12);
   });
 
   it('calculates the users age for planet Jupiter', function(){
-    calc.galacticAgeCalc();
-    expect(calc.galacticAges[2]).toEqual(2);
+    // calc.galacticAgeCalc();
+    expect(calc.galacticAges[3]).toEqual(2);
   });
 
   it('calculates the users life expectancy on planet Mercury', function(){
