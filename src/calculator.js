@@ -28,8 +28,9 @@ export class Calculator {
   galacticAgeCalc(){
     this.findAge();
     const planetsAge = [0.24, 0.62, 1.88, 11.86];
+    debugger;
     for (var i = 0; i < planetsAge.length; i++){
-      this.galacticAges.push(parseInt((1/planetsAge[i])* this.age));
+      this.galacticAges.push(parseInt(this.age/planetsAge[i]))
     }
     return this.galacticAges;
   };
@@ -37,6 +38,7 @@ export class Calculator {
   galacticExpCalc(){
     this.galacticAgeCalc();
     const planets = ["Mercury", "Venus", "Mars", "Jupiter"];
+    const planetsAge = [0.24, 0.62, 1.88, 11.86];
     for(var i = 0; i< planets.length; i++){
       let expectancy = this.galacticAges[i] - this.lifeExpectancy;
       if (expectancy > 0 ){
