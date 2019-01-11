@@ -3,10 +3,13 @@ import { Calculator } from './../src/calculator.js';
 describe('Calculator', function(){
 
   let calc;
+  let calc2;
 
   beforeEach(function(){
     calc = new Calculator("1994-09-20", 79);
     calc.galacticExpCalc();
+    calc2 = new Calculator("1970-01-06", 97);
+    calc2.galacticExpCalc();
   });
 
   it('takes a the users birthday and life expectancy', function(){
@@ -14,6 +17,10 @@ describe('Calculator', function(){
     expect(calc.birthday.getUTCMonth()).toEqual(8);
     expect(calc.birthday.getUTCFullYear()).toEqual(1994);
     expect(calc.lifeExpectancy).toEqual(79);
+    expect(calc2.birthday.getUTCDate()).toEqual(6);
+    expect(calc2.birthday.getUTCMonth()).toEqual(0);
+    expect(calc2.birthday.getUTCFullYear()).toEqual(1970);
+    expect(calc2.lifeExpectancy).toEqual(97);
   });
 
   it('takes the users birthday and life expectancy and sets now as the current time', function(){
@@ -24,25 +31,27 @@ describe('Calculator', function(){
 
   it('calculates the users age based off of their inputted birthday', function(){
     expect(calc.age).toEqual(24);
-    let calc2 = new Calculator("1994-01-03", 79);
-    calc2.findAge();
-    expect(calc2.age).toEqual(25);
+    expect(calc2.age).toEqual(49);
   });
 
   it('calculates the users age for planet Mercury', function(){
     expect(calc.galacticAges[0]).toEqual(100);
+    expect(calc2.galacticAges[0]).toEqual(204);
   });
 
   it('calculates the users age for planet Venus', function(){
     expect(calc.galacticAges[1]).toEqual(38);
+    expect(calc2.galacticAges[1]).toEqual(79);
   });
 
   it('calculates the users age for planet Mars', function(){
     expect(calc.galacticAges[2]).toEqual(12);
+    expect(calc2.galacticAges[2]).toEqual(26);
   });
 
   it('calculates the users age for planet Jupiter', function(){
     expect(calc.galacticAges[3]).toEqual(2);
+    expect(calc2.galacticAges[3]).toEqual(4);
   });
 
   it('calculates the users life expectancy on planet Mercury', function(){

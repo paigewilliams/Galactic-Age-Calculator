@@ -50,4 +50,4 @@ export class Calculator {
     return this.galacticExpectancy;
   };
 
-};
+}
