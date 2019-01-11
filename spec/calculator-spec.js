@@ -57,4 +57,8 @@ describe('Calculator', function(){
     expect(calc.marsExpectancy()).toEqual('You have 67 years left on planet Mars')
   });
 
+  it('calculates the users life expectancy on planet Jupiter', function(){
+    expect(calc.jupiterExpectancy()).toEqual('You have 77 years left on planet Jupiter')
+  });
+
 });
