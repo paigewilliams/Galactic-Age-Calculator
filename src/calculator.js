@@ -5,6 +5,7 @@ export class Calculator {
     this.lifeExpectancy = lifeExpectancy;
     this.age = 0;
     this.galacticAges = [];
+    this.galacticExpectancy = [];
   };
 
   findAge(){
@@ -34,56 +35,21 @@ export class Calculator {
     return this.galacticAges;
   };
 
-  mercuryExpectancy(){
+  galacticExpCalc(){
     this.galacticAgeCalc();
-    let mercuryAge = this.galacticAges[0];
-    let expectancy = mercuryAge - this.lifeExpectancy;
-    if (expectancy > 0) {
-      return `You have lived ${expectancy} years longer than expected on planet Mercury`;
+    const planets = ["Mercury", "Venus", "Mars", "Jupiter"];
+    // let expectancies = []
+    for(var i = 0; i< planets.length; i++){
+      let expectancy = this.galacticAges[i] - this.lifeExpectancy;
+      if (expectancy > 0 ){
+        this.galacticExpectancy.push(`You have lived ${expectancy} years longer than expected on planet ${planets[i]}`);
+      }
+      else {
+        expectancy *= -1;
+        this.galacticExpectancy.push(`You have ${expectancy} years left on planet ${planets[i]}`);
+      }
     }
-    else {
-      expectancy *= -1;
-      return `You have ${expectancy} years left on planet Mercury`;
-    }
-  };
-
-  venusExpectancy(){
-    this.galacticAgeCalc();
-    let venusAge = this.galacticAges[1];
-    let expectancy = venusAge - this.lifeExpectancy;
-    if (expectancy > 0) {
-      return `You have lived ${expectancy} years longer than expected on planet Venus`;
-    }
-    else {
-      expectancy *= -1;
-      return `You have ${expectancy} years left on planet Venus`;
-    }
-  };
-
-  marsExpectancy(){
-    this.galacticAgeCalc();
-    let marsAge = this.galacticAges[2];
-    let expectancy = marsAge - this.lifeExpectancy;
-    if (expectancy > 0) {
-      return `You have lived ${expectancy} years longer than expected on planet Mars`;
-    }
-    else {
-      expectancy *= -1;
-      return `You have ${expectancy} years left on planet Mars`;
-    }
-  };
-
-  jupiterExpectancy(){
-    this.galacticAgeCalc();
-    let jupiterAge = this.galacticAges[3];
-    let expectancy = jupiterAge - this.lifeExpectancy;
-    if (expectancy > 0) {
-      return `You have lived ${expectancy} years longer than expected on planet Jupiter`;
-    }
-    else {
-      expectancy *= -1;
-      return `You have ${expectancy} years left on planet Jupiter`;
-    }
-  };
+    return this.galacticExpectancy;
+  }
 
 }
