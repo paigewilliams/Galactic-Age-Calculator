@@ -1,8 +1,9 @@
 .output {
   display: none;
+  margin-top: 1em;
 }
 
 body {
   background-color: #F3F3F3;
-  max-width: 650;
+  max-width: 650em;
 }
