@@ -19,7 +19,6 @@ export class Calculator {
     if (currentMonth - birthMonth <= 0){
       if (currentDate - birthDate <= 0){
         this.age --;
-        debugger;
       }
     }
     return this.age;

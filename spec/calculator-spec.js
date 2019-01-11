@@ -27,6 +27,10 @@ describe('Calculator', function(){
     let calc2 = new Calculator("1994-01-03", 79);
     calc2.findAge();
     expect(calc2.age).toEqual(25);
-  })
+  });
+
+  it('calculates the users age for planet mercury', function(){
+    expect(calc.mercuryAge()).toEqual(100);
+  });
 
 });
