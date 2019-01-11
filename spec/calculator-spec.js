@@ -24,6 +24,9 @@ describe('Calculator', function(){
   it('calculates the users age based off of their inputted birthday', function(){
     calc.findAge();
     expect(calc.age).toEqual(24);
+    let calc2 = new Calculator("1994-01-03", 79);
+    calc2.findAge();
+    expect(calc2.age).toEqual(25);
   })
 
 });
