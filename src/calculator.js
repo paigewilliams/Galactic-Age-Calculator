@@ -41,4 +41,10 @@ export class Calculator {
     let marsAge = parseInt((1/1.88)* this.age);
     return marsAge;
   }
+
+  jupiterAge(){
+    this.findAge();
+    let marsAge = parseInt((1/11.86)* this.age);
+    return marsAge;
+  }
 }
