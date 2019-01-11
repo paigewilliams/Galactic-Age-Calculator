@@ -3,6 +3,7 @@ export class Calculator {
     this.birthday = new Date(birthday);
     this.now = new Date();
     this.lifeExpectancy = lifeExpectancy;
+    this.age;
   }
 
 }

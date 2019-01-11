@@ -21,4 +21,9 @@ describe('Calculator', function(){
     expect(calc.now.getUTCMonth()).toEqual(0);
   });
 
+  it('calculates the users age based off of their inputted birthday', function(){
+    calc.findAge();
+    expect(calc.age).toEqual(24);
+  })
+
 });
