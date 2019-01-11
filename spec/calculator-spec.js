@@ -29,24 +29,28 @@ describe('Calculator', function(){
     expect(calc2.age).toEqual(25);
   });
 
-  it('calculates the users age for planet mercury', function(){
+  it('calculates the users age for planet Mercury', function(){
     expect(calc.mercuryAge()).toEqual(100);
   });
 
-  it('calculates the users age for planet venus', function(){
+  it('calculates the users age for planet Venus', function(){
     expect(calc.venusAge()).toEqual(38);
   });
 
-  it('calculates the users age for planet mars', function(){
+  it('calculates the users age for planet Mars', function(){
     expect(calc.marsAge()).toEqual(12);
   });
 
-  it('calculates the users age for planet jupiter', function(){
+  it('calculates the users age for planet Jupiter', function(){
     expect(calc.jupiterAge()).toEqual(2);
   });
 
-  it('calculates the users life expectancy on planet mercury', function(){
+  it('calculates the users life expectancy on planet Mercury', function(){
     expect(calc.mercuryExpectancy()).toEqual('You have lived 21 years longer than expected on planet Mercury')
+  })
+
+  it('calculates the users life expectancy on planet Venus', function(){
+    expect(calc.venusExpectancy()).toEqual('You have 41 years left on planet Venus')
   })
 
 });
