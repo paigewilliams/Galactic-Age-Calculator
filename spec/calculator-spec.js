@@ -4,12 +4,15 @@ describe('Calculator', function(){
 
   let calc;
   let calc2;
+  let calc3;
 
   beforeEach(function(){
     calc = new Calculator("1994-09-20", 79);
     calc.galacticExpCalc();
     calc2 = new Calculator("1970-01-06", 97);
     calc2.galacticExpCalc();
+    calc3 = new Calculator("1926-04-06", 74);
+    calc3.galacticExpCalc();
   });
 
   it('takes a the users birthday and life expectancy', function(){
