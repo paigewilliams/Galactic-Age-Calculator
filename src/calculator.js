@@ -23,4 +23,10 @@ export class Calculator {
     }
     return this.age;
   }
+
+  mercuryAge(){
+    this.findAge();
+    let mercuryAge = parseInt((1/.24)* this.age);
+    return mercuryAge;
+  }
 }
