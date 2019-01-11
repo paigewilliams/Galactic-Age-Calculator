@@ -29,4 +29,10 @@ export class Calculator {
     let mercuryAge = parseInt((1/.24)* this.age);
     return mercuryAge;
   }
+
+  venusAge(){
+    this.findAge();
+    let venusAge = parseInt((1/.62)* this.age);
+    return venusAge;
+  }
 }
