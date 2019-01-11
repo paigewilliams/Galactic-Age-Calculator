@@ -37,4 +37,8 @@ describe('Calculator', function(){
     expect(calc.venusAge()).toEqual(38);
   });
 
+  it('calculates the users age for planet mars', function(){
+    expect(calc.marsAge()).toEqual(12);
+  });
+
 });
