@@ -84,4 +84,16 @@ export class Calculator {
     }
   };
 
+  jupiterExpectancy(){
+    let jupiterAge = this.jupiterAge();
+    let expectancy = jupiterAge - this.lifeExpectancy;
+    if (expectancy > 0) {
+      return `You have lived ${expectancy} years longer than expected on planet Jupiter`;
+    }
+    else {
+      expectancy *= -1;
+      return `You have ${expectancy} years left on planet Jupiter`;
+    }
+  };
+
 }
