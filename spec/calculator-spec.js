@@ -41,4 +41,8 @@ describe('Calculator', function(){
     expect(calc.marsAge()).toEqual(12);
   });
 
+  it('calculates the users age for planet jupiter', function(){
+    expect(calc.jupiterAge()).toEqual(2);
+  });
+
 });
