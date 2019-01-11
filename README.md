@@ -1,4 +1,4 @@
-# Webpack Template
+# Super Galactic Age Calculator
 
 #### Janurary 11th, 2019
 
@@ -7,6 +7,10 @@
 ### **Paige Williams**
 
 ## Description
+
+This is an application that accepts a users birthday, and calculates their age on different planets. The application calculates the users age on Mercury, Venus, Mars and Jupiter. It also determines how many years the user has on that planet, based off of their life expectancy for their demographic. If the user has surpassed their life expectancy, the calculator returns the number of years they have lived past their expectancy.
+
+The app is an exercise in using ES6 classes and uses Webpack to process code. It is tested with Jasmine and Karma.
 
 ## Install Instructions
 
@@ -56,6 +60,8 @@ View specs [here](https://github.com/paigewilliams/providore-website/tree/master
 - [ ] Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
 ## Bugs
+
+No known bugs. 
 
 ## Languages & Frameworks Used
 
