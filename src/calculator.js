@@ -72,4 +72,16 @@ export class Calculator {
     }
   };
 
+  marsExpectancy(){
+    let marsAge = this.marsAge();
+    let expectancy = marsAge - this.lifeExpectancy;
+    if (expectancy > 0) {
+      return `You have lived ${expectancy} years longer than expected on planet Mars`;
+    }
+    else {
+      expectancy *= -1;
+      return `You have ${expectancy} years left on planet Mars`;
+    }
+  };
+
 }

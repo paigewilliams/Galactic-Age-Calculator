@@ -54,7 +54,7 @@ describe('Calculator', function(){
   });
 
   it('calculates the users life expectancy on planet Mars', function(){
-    expect(calc.marsExpectancy()).toEqual('You have 67 years left on planet Venus')
+    expect(calc.marsExpectancy()).toEqual('You have 67 years left on planet Mars')
   });
 
 });
