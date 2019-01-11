@@ -17,7 +17,6 @@ export class Calculator {
     const currentDate = this.now.getUTCDate();
 
     this.age = currentYear - birthYear;
-
     if (currentMonth - birthMonth <= 0){
       if (currentDate - birthDate <= 0){
         this.age --;
@@ -38,7 +37,6 @@ export class Calculator {
   galacticExpCalc(){
     this.galacticAgeCalc();
     const planets = ["Mercury", "Venus", "Mars", "Jupiter"];
-    // let expectancies = []
     for(var i = 0; i< planets.length; i++){
       let expectancy = this.galacticAges[i] - this.lifeExpectancy;
       if (expectancy > 0 ){
@@ -50,6 +48,6 @@ export class Calculator {
       }
     }
     return this.galacticExpectancy;
-  }
+  };
 
-}
+};
