@@ -1,6 +1,6 @@
 # Super Galactic Age Calculator
 
-#### Janurary 11th, 2019
+#### January 11th, 2019
 
 ## Contributors
 
