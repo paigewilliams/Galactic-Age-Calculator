@@ -16,18 +16,14 @@ $(document).ready(function(){
     let expect = calc.galacticExpectancy;
     let ages = calc.galacticAges;
 
+    for(var i = 0; i < expect.length; i++){
+      $(".exp").append("<li>" + expect[i] + "</li>");
+    }
 
     $("#mercury").html(ages[0]);
     $("#venus").html(ages[1]);
     $("#mars").html(ages[2]);
     $("#jupiter").html(ages[3]);
-
-    $("#mercury-exp").html(expect[0]);
-    $("#venus-exp").html(expect[1]);
-    $("#mars-exp").html(expect[2]);
-    $("#jupiter-exp").html(expect[3]);
-
-
 
     $(".output").show();
 
